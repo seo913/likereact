@@ -1,0 +1,19 @@
+import { Box, Button } from "@chakra-ui/react";
+import { useContext } from "react";
+import { AppContext } from "../App";
+
+function C() {
+  const {count, setCount} = useContext(AppContext);
+
+  return (
+    <Box w={100} h={100} bgColor="blue.300">
+    {count}
+    <Button colorScheme="yellow" onClick={() => setCount(count + 1)}> 
+    + 
+    </Button> 
+    </Box>
+
+  )
+}
+
+export default C;
